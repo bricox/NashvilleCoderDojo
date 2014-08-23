@@ -1,0 +1,26 @@
+Review what we did last week.
+
+	- Show the html page with the empty layout.
+	- We talked about JQuery and how we can use that.
+	- We talked about CSS.
+	- We used JFiddle for this.
+
+Added a list of metro parks.
+
+Today
+
+	1 - add css to the make the #header to make it positioned at the top, full width, and a height of 40px.  Make the background color dark gray.
+
+	2 - Make #main with a top of 60px, the left 0, right 0, and bottom 0.  Make the font size 12px.
+
+	3 - Now make the #parkMap abosute positioned, the top 0, the left 0, the righ 200px, and the bottom 0.
+
+	4 - It's time now to do something with that list.  Make #parkList with a position of absolute, top 0, width 200px, right 0, bottom 0.  And, add "overflow: scroll" to this one.
+
+	Bonus exercises
+
+	#parkList li  - set this to have a height of 30px, a background color of grey, a font color of white, center the text and set the line height to 30px.
+
+	#parkList li:hover - set the background color to light grey and the font color to black.
+
+

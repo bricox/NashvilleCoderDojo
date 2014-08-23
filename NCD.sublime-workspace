@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"mar",
+				"marker"
+			],
+			[
+				"spl",
+				"splitCount"
+			],
+			[
+				"sp",
+				"splitCount"
+			],
+			[
 				"a",
 				"ajax"
 			],
@@ -112,10 +124,6 @@
 				"font-size"
 			],
 			[
-				"mar",
-				"margin"
-			],
-			[
 				"text",
 				"text-decoration"
 			],
@@ -191,6 +199,14 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "Day2 - HTML, Dataset/index.html",
+			"settings":
+			{
+				"buffer_size": 1216,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"command_palette":
@@ -216,6 +232,9 @@
 	},
 	"file_history":
 	[
+		"/Users/jjct145/Development/Git/NashvilleCoderDojo/Day2 - HTML, Dataset/notes.txt",
+		"/Users/jjct145/Development/Git/NashvilleCoderDojo/src/complete.html",
+		"/Users/jjct145/Development/Git/NashvilleCoderDojo/src/parkList2.js",
 		"/Users/jjct145/Development/Git/NashvilleCoderDojo/src/geoCodeParkList.html",
 		"/Users/jjct145/Development/Git/NashvilleCoderDojo/src/parkList.js",
 		"/Users/jjct145/Dropbox/Nashville Coder Dojo/site/index.html",
@@ -251,6 +270,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"}",
 			"<tsw:EndLo.77",
 			"724566",
 			"<tsw:EndLo.77<",
@@ -263,6 +283,7 @@
 		"regex": false,
 		"replace_history":
 		[
+			"},"
 		],
 		"reverse": false,
 		"show_context": true,
@@ -272,6 +293,40 @@
 	},
 	"groups":
 	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "Day2 - HTML, Dataset/index.html",
+					"settings":
+					{
+						"buffer_size": 1216,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								321,
+								321
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
 		{
 			"sheets":
 			[
@@ -295,11 +350,18 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.5,
 			1.0
 		],
 		"rows":
@@ -311,7 +373,7 @@
 	"menu_visible": true,
 	"replace":
 	{
-		"height": 0.0
+		"height": 64.0
 	},
 	"save_all_on_build": true,
 	"select_file":

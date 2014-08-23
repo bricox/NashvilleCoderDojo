@@ -1,7 +1,7 @@
 <html>
 <head>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="parkList.js"></script>
+  <script src="parkList2.js"></script>
   <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjOJYhxTQepuVYdppTU5dQ-nYyU-6N5IU"></script>
   <style>
     body{
@@ -27,6 +27,14 @@
       bottom: 0;
       right: 0;
       font-size: 12px;
+    }
+
+    #parkMap{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 200px;
+      bottom: 0;
     }
 
     #parkList{
@@ -57,13 +65,7 @@
       color: black;
     }
 
-    #parkMap{
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 200px;
-      bottom: 0;
-    }
+    
 
   </style>
 </head>
@@ -90,64 +92,44 @@ var mapOptions = {
 var map = new google.maps.Map(document.getElementById("parkMap"),
           mapOptions);
 
-  var geoCoder = new google.maps.Geocoder();
+  //add parks to map.
+  for(var i=0; i<metroParks.length; i++){
 
+    var park = metroParks[i];
+    var splitAddress = park.address.split(',');
+    var splitCount = splitAddress.length;
+    park.lngLat = new google.maps.LatLng(splitAddress[splitCount-2], splitAddress[splitCount-1]);
+    debugger;
 
-  //first, convert the list into a structure I care about.
-  var parkList = [];
-  for(var i=0; i<metroParks.data.length; i++){
-
-    var park = {"name": metroParks.data[i][8],
-      "location": JSON.parse(metroParks.data[i][41][0]),
-      "lngLat": {}
-      };
-
-      (function(park){
-
-          geoCoder.geocode({'address': park.location.address + ' ' + park.location.city + ' ' + park.location.state}, function(results, status){
-
-            if (park.name === 'Cane Ridge Park') debugger;
-
-          if (status == google.maps.GeocoderStatus.OK) {
-              park.lngLat = results[0].geometry.location;
-            var marker = new google.maps.Marker({
+      var marker = new google.maps.Marker({
                 map: map,
                 position: park.lngLat
             });
-            var infoWindow = new google.maps.InfoWindow({content: '<div>' + park.name + '</div>'});
-            google.maps.event.addListener(marker, 'click', function(){
-              infoWindow.open(map, marker);
-            })
-          }
-          });
-        })(park);
+      var infoWindow = new google.maps.InfoWindow({content: '<div>' + park.name + '</div>'});
+      google.maps.event.addListener(marker, 'click', (function(marker, infoWindow){
+        return function(){infoWindow.open(map, marker);}
+      })(marker, infoWindow)
+      );
 
-    parkList.push(park);
   }
 
   var htmlList = $("#parkList").append('<ul></ul>');
 
-  for(var i=0; i<parkList.length; i++){
+  for(var i=0; i<metroParks.length; i++){
     (function (indx){
-      var listItem = $('<li>' + parkList[i].name + '</li>').on('click', function(){ clickPark(indx)});
+      var listItem = $('<li>' + metroParks[i].name + '</li>').on('click', function(){ clickPark(indx)});
       htmlList.append(listItem);
     })(i);
   }
 
-
-
-  //add markers to map
-
-
   function clickPark(indx){
-    var park = parkList[indx];
+    var park = metroParks[indx];
     console.log(park.name);
     debugger;
     if (park.lngLat){
       map.setCenter(park.lngLat);
       map.setZoom(15);
     }
-    //todo
   }
 
 </script>
