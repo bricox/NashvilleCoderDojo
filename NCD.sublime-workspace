@@ -1,0 +1,339 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"a",
+				"ajax"
+			],
+			[
+				"us",
+				"userPassword"
+			],
+			[
+				"user",
+				"username"
+			],
+			[
+				"to",
+				"tokenUrl"
+			],
+			[
+				"dis",
+				"disabled"
+			],
+			[
+				"panel1",
+				"panel1Next"
+			],
+			[
+				"pan",
+				"panel1Next"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"pa",
+				"panel2"
+			],
+			[
+				"com",
+				"computed"
+			],
+			[
+				"get",
+				"getTimeConversionOffset"
+			],
+			[
+				"is",
+				"isTargetCST"
+			],
+			[
+				"isc",
+				"isCurrentCST"
+			],
+			[
+				"isC",
+				"isCentralTimeZone"
+			],
+			[
+				"time",
+				"timeZone"
+			],
+			[
+				"Pro",
+				"ProcessResults"
+			],
+			[
+				"coo",
+				"cookieName"
+			],
+			[
+				"coun",
+				"countStorage"
+			],
+			[
+				"value",
+				"valueId"
+			],
+			[
+				"count",
+				"countList"
+			],
+			[
+				"sele",
+				"selectedValues"
+			],
+			[
+				"bord",
+				"border-radius"
+			],
+			[
+				"bor",
+				"border-radius"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"txt",
+				"text-align"
+			],
+			[
+				"min",
+				"min-height"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"text",
+				"text-decoration"
+			],
+			[
+				"list",
+				"list-style"
+			],
+			[
+				"show",
+				"showSelectedList"
+			],
+			[
+				"sh",
+				"showSelectedList"
+			],
+			[
+				"selected",
+				"selectedValue"
+			],
+			[
+				"regi",
+				"registerEventHandler"
+			],
+			[
+				"option",
+				"option"
+			],
+			[
+				"select",
+				"selectedCounties"
+			],
+			[
+				"app",
+				"applyBindings"
+			],
+			[
+				"data",
+				"data-bind"
+			],
+			[
+				"ob",
+				"observableArray"
+			],
+			[
+				"county",
+				"countyList"
+			],
+			[
+				"op",
+				"option"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"options",
+				"optionsArray"
+			],
+			[
+				"inl",
+				"inline-block"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"p",
+				"pickList"
+			]
+		]
+	},
+	"buffers":
+	[
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/jjct145/Development/Git/NashvilleCoderDojo/src/geoCodeParkList.html",
+		"/Users/jjct145/Development/Git/NashvilleCoderDojo/src/parkList.js",
+		"/Users/jjct145/Dropbox/Nashville Coder Dojo/site/index.html",
+		"/Users/jjct145/Desktop/Notes",
+		"/Users/jjct145/Dropbox/TDOT/OpenData/samples/node_apiKey",
+		"/Users/jjct145/Dropbox/TDOT/OpenData/samples/apiKey.html",
+		"/Users/jjct145/Dropbox/Security Vulnerability Findings 2014",
+		"/Users/jjct145/Development/Git/TestProjects/ArcGisOAuth/index.html",
+		"/Users/jjct145/Library/Containers/com.apple.mail/Data/Library/Mail Downloads/5C6F0A01-E3BD-4F9E-8A8D-D841921A11B2/Image_JPG",
+		"/Users/jjct145/Dropbox/TDOT/Internal Audit/Notes, Meeting with Renee.txt",
+		"/Users/jjct145/Downloads/__jquery/jquery.tablesorter.js",
+		"/Users/jjct145/Dropbox/TDOT/Virtual Machine Notes.txt",
+		"/Users/jjct145/Development/Git/TestProjects/TestKnockoutReferences/index.html",
+		"/Users/jjct145/Development/Git/TestProjects/ComputedTest/index.html",
+		"/Users/jjct145/Development/Git/TestProjects/GoogleMapPointTest/index",
+		"/Users/jjct145/Dropbox/Enterprise Sharepoint Notes",
+		"/Users/jjct145/Dropbox/Websites/AliveHospice/Website Notes",
+		"/Users/jjct145/Desktop/Jabber Settings"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"<tsw:EndLo.77",
+			"724566",
+			"<tsw:EndLo.77<",
+			"10px",
+			"selectedValue"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 181.0,
+	"status_bar_visible": true
+}

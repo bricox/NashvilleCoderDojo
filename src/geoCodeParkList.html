@@ -1,0 +1,150 @@
+<html>
+<head>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="parkList.js"></script>
+  <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjOJYhxTQepuVYdppTU5dQ-nYyU-6N5IU"></script>
+  <style>
+    body{
+        font-size: 10px;
+        background-color: darkgrey;
+    }
+
+    #header{
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 40px;
+      right: 0;
+      font-size: 14px;
+      background-color: darkgrey;
+
+    }
+
+    #main{
+      position: absolute;
+      top: 60px;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      font-size: 12px;
+    }
+
+    #parkList{
+      font-size: 14px;
+      position: absolute;
+      top: 0;
+      width: 200px;
+      right: 0;
+      bottom: 0;
+      overflow: scroll;
+      list-style-type: none;
+      margin: 0px;
+      padding: 0px;
+    }
+
+    #parkList li{
+      height: 30px;
+      border: 1px solid black;
+      background-color: grey;
+      color: white;
+      text-align: center;
+      line-height: 30px;
+
+    }
+
+    #parkList li:hover{
+      background-color: lightgrey;
+      color: black;
+    }
+
+    #parkMap{
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 200px;
+      bottom: 0;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="header">
+    <h1>Metro Parks</h1>
+  </div>
+  <div id="main">
+    <div id="parkList">
+    </div>
+    <div id="parkMap">
+    </div>
+  </div>
+</body>
+
+<script type="text/javascript">
+
+//define my map.
+var mapOptions = {
+        center: new google.maps.LatLng(36.1667, -86.7833),
+        zoom: 10
+      };
+var map = new google.maps.Map(document.getElementById("parkMap"),
+          mapOptions);
+
+  var geoCoder = new google.maps.Geocoder();
+
+
+  //first, convert the list into a structure I care about.
+  var parkList = [];
+  var htmlList = $("#parkList").append('<ul></ul>');
+  for(var i=0; i<metroParks.data.length; i++){
+
+    setTimeout((function(i){
+      debugger;
+
+    var park = {"name": metroParks.data[i][8],
+      "location": JSON.parse(metroParks.data[i][41][0]),
+      "lngLat": {}
+      };
+
+      (function(park){
+
+          geoCoder.geocode({'address': park.location.address + ' ' + park.location.city + ' ' + park.location.state}, function(results, status){
+
+            if (park.name === 'Cane Ridge Park') debugger;
+
+          if (status == google.maps.GeocoderStatus.OK) {
+              park.lngLat = results[0].geometry.location;
+            var marker = new google.maps.Marker({
+                map: map,
+                position: park.lngLat
+            });
+            var infoWindow = new google.maps.InfoWindow({content: '<div>' + park.name + '</div>'});
+            google.maps.event.addListener(marker, 'click', function(){
+              infoWindow.open(map, marker);
+            })
+          }
+          });
+        })(park);
+
+    parkList.push(park);
+  })(i), 500 * i);
+}
+
+
+  //add markers to map
+
+
+  function clickPark(indx){
+    var park = parkList[indx];
+    console.log(park.name);
+    debugger;
+    if (park.lngLat){
+      map.setCenter(park.lngLat);
+      map.setZoom(15);
+    }
+    //todo
+  }
+
+</script>
+
+</html>
