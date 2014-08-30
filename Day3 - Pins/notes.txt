@@ -1,0 +1,87 @@
+Review what we did last week.
+
+	- Added the styles to our html page
+		- we now have a header
+		- we now have a side bar that has a list of parks, formatted.
+
+
+Today
+
+	1 - Add a pin to the map for every park.
+		a - First, we need to implement the function "addPinToMap".
+			The function has one parameter called "indx", which is the park number that we want to get from our park list.
+			We need to get the park at position indx in order to get the park's location.  
+
+			step 1 - define a variable called "park" and assign it to the park at position indx.
+				(Hint:  to get the park at position indx, you do: metroParks[indx] )
+
+			step 2 - define a variable called marker and assign it to a new google maps marker.  
+				To create a new marker, you call it like so:
+				new google.maps.Marker({
+      				map: map,
+      				position: park.lngLat
+    			})
+
+    	b - Call the function addPinToMap function from inside of the for loop.  Pass it the value of i as it's parameter.    
+    	
+    	Refresh the app in your browser.  You should not see pins on your map.
+
+	2 - Add a click event to every item in the list to center the map at that park's location.  
+		a - First, we need to implement the function "clickParkListItem".  
+		
+			The function has one parameter called "indx", which is the park number that we want to get from our park list.  We need to get the park at position indx in order to get the park's location.  
+
+			step 1 - define a variable called "park" and assign it to the park at position indx.
+
+			step 2 - set the map's center.  	
+				You set the map's center by calling the function 
+					map.setCenter(park.lngLat);
+
+			step 3 - set the map's zoom.
+				You set the map's zoom by calling the function
+					map.setZoom(15);
+
+		b - Call the function clickParkListItem function from inside of the for loop.  Pass it the value of i as it's parameter.    
+    	
+    	Refresh the app in your browser.  When you click on an item in the list, the map should now center on that point.
+
+    	Take a moment to play with the zoom level.  Which value do you prefer?
+
+    Bonus Exercises
+
+	3 - Add a click event to every pin to show a description of the park.
+		a - First, we need to implement the function "addClickToMarker".  
+
+			The function takes two parameters called marker and park.  The parameter this the marker we want to add the click event too.   Park is the selected park, which we need to get the name of the park to display.
+
+			step 1 - define a variable called message and set it to the park's name.
+				(Hint: you get the park's name from park.name)
+
+			step 2 - define a variable called infoWindow and set it to a new google maps infowindow.  
+
+				You create the info window by doing this:
+				var infoWindow = new google.maps.InfoWindow({content: message});
+
+			step 3 - all the function addListenerToMap.  Give it two parameters, marker and infoWindow.
+
+		b - Call the function "addClickToMarker" from inside the function addPinToMap.  Pass the marker and park as paramaters to the function.
+
+		Can you change the message of the info box?  What happens when you change it to '<p>' + park.name + '</p>'  ?  How about '<h1>' + park.name + '</h1>' ?  Can you add the park address to it?
+
+	4 - Super bonus exercise!  
+			When we click an item in the list, it centers the map on that item.  Wouldn't it be great if we had a button to re-center the map at the view we had we started the application?  
+
+				Step 1 - Write a function that will set the map back to the values in mapOptions.
+
+				Step 2 - Add a button to the html form.  Give it an id of "reset".
+
+				Step 3 - Add a "click" event handler that call our function when click the button
+					(Hint:  remember, we can add a click event to a button by calling:
+						$("#reset").on('click', The Name of Our Function)
+					)
+
+
+
+
+
+	
